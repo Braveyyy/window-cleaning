@@ -66,6 +66,10 @@ main {
   opacity: 0.95;
   animation: fadeIn 1.5s cubic-bezier(.4,0,.2,1);
 }
+
+.main-content h1, p {
+  text-align: center;
+}
 .services {
   padding: 2rem 0 1rem 0;
   background: rgba(202,240,248,0.95);

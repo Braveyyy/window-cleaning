@@ -54,10 +54,12 @@ const App: React.FC = () => (
       <section className="services" id="services">
         <h2>Our Services</h2>
         <ul>
-          <li>Residential & Commercial Window Cleaning</li>
-          <li>Screen Cleaning</li>
-          <li>Skylight & Mirror Cleaning</li>
-          <li>Gutter Cleaning</li>
+          <li>Window Cleaning</li>
+          <li>Pressure Washing</li>
+          <li>House Washing</li>
+          <li>Solar Cleaning</li>
+          <li>House Keeping</li>
+          <li>...and much more!</li>
         </ul>
       </section>
       <Gallery />
@@ -72,7 +74,7 @@ const App: React.FC = () => (
           <button type="submit">Send</button>
         </form>
         <div className="contact-info">
-          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Phone:</strong> (720) 656-7997</p>
           <p><strong>Email:</strong> info@hydrospark.com</p>
         </div>
       </section>
