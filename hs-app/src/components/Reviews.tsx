@@ -3,16 +3,16 @@ import './Reviews.css';
 
 const reviews = [
   {
-    name: 'Sarah K.',
-    text: 'Crystal Clear did an amazing job on our home windows. Highly recommend!'
+    name: 'C C.',
+    text: 'Alex and his partner did a great job on our windows. They came in, quoted a fair price, worked quickly, cleaned thoroughly and efficiently and left the area tidy. We had some unusual windows and difficult access, but they figured it out and got the job done. I’d highly recommend this company.'
   },
   {
-    name: 'Mike D.',
-    text: 'Professional, punctual, and left our storefront sparkling.'
+    name: 'Kruz W.',
+    text: 'Alex arrived on time and my windows haven’t looked this good in years. If you are in need of a window professional, you won’t go wrong in having these folks do your job. Reasonable pricing and excellent service.'
   },
   {
-    name: 'Linda P.',
-    text: 'Best window cleaning service we have ever used!'
+    name: 'Ruth B.',
+    text: 'Alex did a terrific job of cleaning our windows. I was very pleased. He is conscientious, efficient and gave us a very good price.'
   }
 ];
 

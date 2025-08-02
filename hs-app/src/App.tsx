@@ -1,11 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
 import './App.css';
 
-const App: React.FC = () => (
+const App: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'zhhaoying1738@gmail.com',
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      if (result.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
   <div>
     <Header />
     <main className="main-content">
@@ -45,7 +95,7 @@ const App: React.FC = () => (
           </svg>
         </div>
         <h1>HydroSpark</h1>
-        <p>Let the sunshine in! Professional window cleaning for homes and businesses.</p>
+        <p>Professional window cleaning for homes and businesses in Denver, Colorado</p>
         {/* SVG Divider */}
         <svg className="divider-svg" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M0,30 Q720,90 1440,30 V60 H0 Z" fill="#90e0ef" fillOpacity="0.25"/>
@@ -67,15 +117,49 @@ const App: React.FC = () => (
       <section className="contact" id="contact">
         <h2>Contact Us</h2>
         <p>Ready for sparkling windows? Get in touch for a free quote!</p>
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required />
-          <button type="submit">Send</button>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input 
+            type="text" 
+            name="name"
+            placeholder="Your Name" 
+            value={formData.name}
+            onChange={handleInputChange}
+            required 
+          />
+          <input 
+            type="email" 
+            name="email"
+            placeholder="Your Email" 
+            value={formData.email}
+            onChange={handleInputChange}
+            required 
+          />
+          <textarea 
+            name="message"
+            placeholder="Your Message" 
+            value={formData.message}
+            onChange={handleInputChange}
+            required 
+          />
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Send'}
+          </button>
         </form>
+        
+        {submitStatus === 'success' && (
+          <div className="success-message">
+            Thank you. We'll be in touch with your free quote soon!
+          </div>
+        )}
+        
+        {submitStatus === 'error' && (
+          <div className="error-message">
+            Sorry, there was an error sending your message. Please try again.
+          </div>
+        )}
         <div className="contact-info">
           <p><strong>Phone:</strong> (720) 656-7997</p>
-          <p><strong>Email:</strong> info@hydrospark.com</p>
+          <p><strong>Email:</strong> zhhaoying1738@gmail.com</p>
         </div>
       </section>
     </main>
@@ -89,6 +173,7 @@ const App: React.FC = () => (
       </svg>
     </div>
   </div>
-);
+  );
+};
 
 export default App;
