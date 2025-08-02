@@ -29,6 +29,7 @@ const BeforeAfterSlider: React.FC<{ image: BeforeAfterImage }> = ({ image }) => 
   const isDragging = useRef(false);
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
     isDragging.current = true;
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
@@ -50,6 +51,7 @@ const BeforeAfterSlider: React.FC<{ image: BeforeAfterImage }> = ({ image }) => 
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
     isDragging.current = true;
   };
 
