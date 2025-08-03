@@ -20,7 +20,7 @@ body {
   margin: 0;
   color: #222;
   min-height: 100vh;
-  background: url('./assets/background.jpg') center center/cover no-repeat fixed;
+  background: url('/assets/background.jpg') center center/cover no-repeat fixed;
   position: relative;
 }
 #root, main, .header, .footer, section {
