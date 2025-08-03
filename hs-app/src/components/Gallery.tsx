@@ -11,8 +11,8 @@ interface BeforeAfterImage {
 const beforeAfterImages: BeforeAfterImage[] = [
   {
     id: 1,
-    before: './src/assets/after-1.jpg',
-    after: './src/assets/before-1.jpg', // Replace with actual after image
+    before: '../assets/after-1.jpg',
+    after: '../assets/before-1.jpg', // Replace with actual after image
     caption: 'Residential Home'
   },
   {
