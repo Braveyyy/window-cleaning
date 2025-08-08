@@ -101,6 +101,24 @@ const App: React.FC = () => {
           <path d="M0,30 Q720,90 1440,30 V60 H0 Z" fill="#90e0ef" fillOpacity="0.25"/>
         </svg>
       </section>
+      
+      {/* Call to Action Button */}
+      <div className="cta-container">
+        <button 
+          className="cta-button"
+          onClick={() => {
+            document.getElementById('contact')?.scrollIntoView({ 
+              behavior: 'smooth' 
+            });
+          }}
+        >
+          <span className="cta-text">Get Your Free Quote Today!</span>
+          <svg className="cta-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 3L17 10L10 17M17 10H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
       <section className="services" id="services">
         <h2>Our Services</h2>
         <ul>

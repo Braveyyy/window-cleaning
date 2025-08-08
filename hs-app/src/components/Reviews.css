@@ -8,7 +8,7 @@
 }
 .reviews {
   padding: 2rem 1rem;
-  background: rgba(202,240,248,0.95);
+  background: #93e0fc;
   border-radius: 1.5rem;
   box-shadow: var(--shadow);
   animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1);
