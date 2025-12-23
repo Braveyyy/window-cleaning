@@ -66,7 +66,7 @@ const App: React.FC = () => {
             <circle className="bubble bubble3" cx="80" cy="70" r="4" fill="#00b4d8"/>
           </svg>
           <section className="hs-logo">
-            <img src='/public/assets/hs-title.png'></img>
+            <img src='/assets/hs-title.png'></img>
           </section>
         </div>
         <p>Professional window cleaning for homes and businesses in Denver, Colorado</p>
