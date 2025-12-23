@@ -57,44 +57,19 @@ const App: React.FC = () => {
 
   return (
   <div>
-    <Header />
     <main className="main-content">
       <section className="hero" id="home">
         <div className="hero-svg-container">
-          {/* Decorative SVG bubbles */}
+          {/* decorative bubbles */}
           <svg className="bubbles-svg" width="100" height="100" viewBox="0 0 100 100" fill="none" aria-hidden="true">
             <circle className="bubble bubble1" cx="20" cy="80" r="8" fill="#90e0ef"/>
             <circle className="bubble bubble2" cx="60" cy="90" r="5" fill="#caf0f8"/>
             <circle className="bubble bubble3" cx="80" cy="70" r="4" fill="#00b4d8"/>
           </svg>
-          {/* Window SVG (main hero icon) */}
-          <svg
-            className="window-svg"
-            width="120"
-            height="120"
-            viewBox="0 0 120 120"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <rect x="20" y="20" width="80" height="80" rx="10" fill="#fff" stroke="#90e0ef" strokeWidth="4"/>
-            <rect x="20" y="20" width="38" height="80" rx="8" fill="#caf0f8"/>
-            <rect x="62" y="20" width="38" height="80" rx="8" fill="#e0f7fa"/>
-            <g className="sparkle sparkle1">
-              <circle cx="40" cy="35" r="3" fill="#00b4d8"/>
-              <circle cx="40" cy="35" r="1.5" fill="#fff"/>
-            </g>
-            <g className="sparkle sparkle2">
-              <circle cx="80" cy="60" r="2.2" fill="#00b4d8"/>
-              <circle cx="80" cy="60" r="1.1" fill="#fff"/>
-            </g>
-            <g className="sparkle sparkle3">
-              <circle cx="60" cy="90" r="1.7" fill="#00b4d8"/>
-              <circle cx="60" cy="90" r="0.8" fill="#fff"/>
-            </g>
-          </svg>
+          <section className="hs-logo">
+            <img src='/public/assets/hs-title.png'></img>
+          </section>
         </div>
-        <h1>HydroSpark</h1>
         <p>Professional window cleaning for homes and businesses in Denver, Colorado</p>
         {/* SVG Divider */}
         <svg className="divider-svg" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -135,6 +110,7 @@ const App: React.FC = () => {
       <section className="contact" id="contact">
         <h2>Contact Us</h2>
         <p>Ready for sparkling windows? Get in touch for a free quote!</p>
+        <br></br>
         <form className="contact-form" onSubmit={handleSubmit}>
           <input 
             type="text" 

@@ -20,7 +20,7 @@ body {
   margin: 0;
   color: #222;
   min-height: 100vh;
-  background: url('/assets/background.jpg') center center/cover no-repeat fixed;
+  background: url('/assets/background.jpeg') center center/cover no-repeat fixed;
   position: relative;
 }
 #root, main, .header, .footer, section {
@@ -68,7 +68,12 @@ main {
   animation: fadeIn 1.5s cubic-bezier(.4,0,.2,1);
 }
 
+.hs-logo img {
+    width: 700px;
+}
+
 .main-content h1, p {
+  margin: 0 1rem;
   text-align: center;
 }
 
@@ -246,18 +251,31 @@ main {
 @media (max-width: 900px) {
   main {
     max-width: 98vw;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
   }
   .hero {
-    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    padding: 2rem 1rem 1.5rem 1rem;
   }
 }
 @media (max-width: 768px) {
+  main {
+    padding: 0 1.5rem;
+  }
+  .hero {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
   .hero h1 {
     font-size: 2rem;
   }
   .hero p {
     font-size: 1.05rem;
+  }
+  .hs-logo img {
+    width: 95vw;
+  }
+  .services {
+    margin: 2rem 1rem 0 1rem;
+    padding: 2rem 1rem 1rem 1rem;
   }
   .services ul {
     gap: 1rem;
@@ -266,6 +284,10 @@ main {
     padding: 0.8rem 1rem;
     font-size: 1rem;
   }
+  .contact {
+    margin: 2rem 1rem 0 1rem;
+    padding: 2rem 1rem;
+  }
   .contact-form {
     max-width: 95vw;
   }
@@ -273,10 +295,16 @@ main {
     padding: 0.9rem 1.8rem;
     font-size: 1rem;
   }
+  .cta-container {
+    margin: 2rem 1rem;
+  }
 }
 @media (max-width: 600px) {
+  main {
+    padding: 0 1.2rem;
+  }
   .hero {
-    padding: 1.5rem 0.2rem 1rem 0.2rem;
+    padding: 1.5rem 1.2rem 1rem 1.2rem;
   }
   .hero h1 {
     font-size: 1.3rem;
@@ -284,16 +312,24 @@ main {
   .services h2, .gallery h2, .reviews h2, .contact h2 {
     font-size: 1.2rem;
   }
+  .services {
+    margin: 2rem 0.8rem 0 0.8rem;
+    padding: 1.5rem 0.8rem 1rem 0.8rem;
+  }
   .services ul {
     flex-direction: column;
     align-items: center;
     gap: 0.7rem;
   }
   .services li {
-    width: 90vw;
+    width: 85vw;
     max-width: 350px;
-    padding: 0.7rem 0.5rem;
+    padding: 0.7rem 1rem;
     font-size: 0.98rem;
+  }
+  .contact {
+    margin: 2rem 0.8rem 0 0.8rem;
+    padding: 1.5rem 0.8rem;
   }
   .cta-button {
     padding: 0.8rem 1.5rem;
@@ -304,13 +340,16 @@ main {
     width: 18px;
     height: 18px;
   }
+  .cta-container {
+    margin: 2rem 0.8rem;
+  }
 }
 @media (max-width: 480px) {
   main {
-    padding: 0 0.1rem;
+    padding: 0 1rem;
   }
   .hero {
-    padding: 1rem 0.1rem 0.7rem 0.1rem;
+    padding: 1rem 1rem 0.7rem 1rem;
   }
   .hero h1 {
     font-size: 1.1rem;
@@ -318,9 +357,18 @@ main {
   .hero p {
     font-size: 0.95rem;
   }
+  .services {
+    margin: 1.5rem 0.5rem 0 0.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
   .services li {
     font-size: 0.93rem;
-    padding: 0.5rem 0.2rem;
+    padding: 0.5rem 0.8rem;
+    width: 80vw;
+  }
+  .contact {
+    margin: 1.5rem 0.5rem 0 0.5rem;
+    padding: 1rem 0.5rem;
   }
   .contact-form input,
   .contact-form textarea {
@@ -339,6 +387,9 @@ main {
   .cta-arrow {
     width: 16px;
     height: 16px;
+  }
+  .cta-container {
+    margin: 1.5rem 0.5rem;
   }
 }
 .hero-svg-container {

@@ -64,7 +64,8 @@
 }
 @media (max-width: 900px) {
   .reviews {
-    padding: 1.2rem 0.5rem;
+    padding: 1.2rem 1rem;
+    margin: 0 1rem;
   }
   .reviews-list {
     gap: 1rem;
@@ -72,7 +73,8 @@
 }
 @media (max-width: 600px) {
   .reviews {
-    padding: 0.7rem 0.1rem;
+    padding: 0.7rem 0.8rem;
+    margin: 0 0.8rem;
   }
   .reviews-list {
     flex-direction: column;
@@ -80,15 +82,22 @@
     gap: 0.7rem;
   }
   .review {
-    max-width: 95vw;
+    max-width: 90vw;
     min-width: 0;
-    padding: 0.7rem 0.5rem;
+    padding: 0.7rem 1rem;
   }
   .review-text {
     font-size: 0.98rem;
   }
 }
 @media (max-width: 400px) {
+  .reviews {
+    padding: 0.5rem 0.5rem;
+    margin: 0 0.5rem;
+  }
+  .review {
+    padding: 0.5rem 0.8rem;
+  }
   .review-text {
     font-size: 0.9rem;
   }

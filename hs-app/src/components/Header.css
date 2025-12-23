@@ -1,8 +1,8 @@
 :root {
-  --primary: #0077b6;
-  --primary-light: #90e0ef;
+  --primary: #67d6f2;
+  --primary-light: #93e0fc;
   --accent: #00b4d8;
-  --dark: #023e8a;
+  --dark: #343a40;
   --white: #fff;
   --glass: rgba(255,255,255,0.15);
   --shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -65,20 +65,24 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: none;
+  background: rgba(255, 255, 255, 0.9);
   border: none;
+  border-radius: 6px;
   cursor: pointer;
   z-index: 21;
   transition: background 0.2s;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .hamburger span {
   display: block;
   height: 4px;
   width: 100%;
-  background: var(--white);
+  background: #2c3e50;
   margin: 5px 0;
   border-radius: 2px;
   transition: 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 .hamburger.open span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
@@ -88,6 +92,11 @@
 }
 .hamburger.open span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 /* Mobile nav overlay */
 .mobile-nav {
@@ -146,7 +155,7 @@
 /* Responsive styles */
 @media (max-width: 900px) {
   .header {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 }
 @media (max-width: 768px) {
@@ -158,17 +167,20 @@
   }
 }
 @media (max-width: 480px) {
+  .header {
+    padding: 1rem 1.2rem;
+  }
   .logo {
     font-size: 1.1rem;
   }
   .mobile-nav ul {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     gap: 1.2rem;
   }
 } 
+
 .nav-links a, .mobile-nav a {
   font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
   font-weight: 700;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18), 0 0 2px #fff, 0 0 8px rgba(0,0,0,0.12);
-  color: var(--dark);
 } 

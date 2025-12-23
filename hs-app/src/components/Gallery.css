@@ -305,7 +305,8 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .gallery {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
+    margin: 0 1rem;
   }
   
   .gallery h2 {
@@ -351,6 +352,11 @@
 }
 
 @media (max-width: 480px) {
+  .gallery {
+    padding: 2rem 1rem;
+    margin: 0 0.8rem;
+  }
+  
   .gallery h2 {
     font-size: 1.8rem;
   }
