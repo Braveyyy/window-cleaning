@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Reviews from './components/Reviews';
